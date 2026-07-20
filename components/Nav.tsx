@@ -42,7 +42,7 @@ export default function Nav({ variant = "home" }: { variant?: "home" | "pricing"
             </>
           ) : (
             <>
-              <a href="#features" style={{ color: "rgba(255,255,255,0.66)", fontSize: 15, fontWeight: 500 }}>Product</a>
+              <a href="#" style={{ color: "#F5F3FA", fontSize: 15, fontWeight: 700 }}>Home</a>
               <Link href="/pricing" style={{ color: "rgba(255,255,255,0.66)", fontSize: 15, fontWeight: 500 }}>Pricing</Link>
               <a href="#faq" style={{ color: "rgba(255,255,255,0.66)", fontSize: 15, fontWeight: 500 }}>FAQ</a>
             </>
