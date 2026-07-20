@@ -801,7 +801,20 @@ export default class VerifyRitApp extends Component<Record<string, never>, AppSt
           glowOpacity={0.9}
         />
 
-        <TrustStrip trustLogos={["Northwind", "Lumafi", "Beacon", "Coreline", "Vantage", "Meridian"]} />
+        <TrustStrip
+          trustLogos={[
+            { name: "A.O. Smith Corporation", src: "/trust-logos/ao-smith.svg", width: 86 },
+            { name: "AbbVie Inc.", src: "/trust-logos/abbvie.svg", width: 130 },
+            { name: "AFLAC Incorporated", src: "/trust-logos/aflac.svg", width: 78 },
+            { name: "Align Technology, Inc.", src: "/trust-logos/align-technology.svg", width: 52 },
+            { name: "Alliant Energy Corporation", src: "/trust-logos/alliant-energy.svg", width: 53 },
+            { name: "Amgen Inc.", src: "/trust-logos/amgen.svg", width: 92 },
+            { name: "Campbell Soup Company", src: "/trust-logos/campbell-soup.svg", width: 87 },
+            { name: "Coterra Energy Inc.", src: "/trust-logos/coterra-energy.svg", width: 123 },
+            { name: "Devon Energy Corporation", src: "/trust-logos/devon-energy.svg", width: 54 },
+            { name: "Elevance Health, Inc.", src: "/trust-logos/elevance-health.svg", width: 55 },
+          ]}
+        />
 
         <VerificationOverview
           overviewCards={overviewCards}
