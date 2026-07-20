@@ -4,12 +4,12 @@ export type FaqItem = { q: string; a: string; open: boolean; onClick: () => void
 
 export default function FAQ({ faqs }: { faqs: FaqItem[] }) {
   return (
-    <section id="faq" className="vr-row" style={{ padding: "60px var(--vr-gutter, 32px) 80px", maxWidth: 980, margin: "0 auto" }}>
+    <section id="faq" className="vr-row vr-faq-section" style={{ padding: "60px var(--vr-gutter, 32px) 80px", maxWidth: 980, margin: "0 auto" }}>
       <div style={{ textAlign: "center", marginBottom: 44 }}>
         <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A78BFA", margin: "0 0 14px" }}>Questions</p>
         <h2 style={{ fontSize: 48, fontWeight: 800, letterSpacing: "-0.03em", margin: 0 }}>Everything you need to know.</h2>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16 }}>
         {faqs.map((faq, i) => (
           <div
             key={i}

@@ -11,7 +11,7 @@ export type HeroProps = HeroValidatorProps & {
 
 export default function Hero(p: HeroProps) {
   return (
-    <header style={{ position: "relative", padding: "92px var(--vr-gutter, 32px) 110px", overflow: "hidden" }}>
+    <header className="vr-hero" style={{ position: "relative", padding: "92px var(--vr-gutter, 32px) 110px", overflow: "hidden" }}>
       <div
         style={{
           position: "absolute",
@@ -28,7 +28,7 @@ export default function Hero(p: HeroProps) {
           opacity: p.glowOpacity,
         }}
       />
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", textAlign: "center" }}>
+      <div className="vr-hero-inner" style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", textAlign: "center" }}>
         <div
           style={{
             display: "inline-flex",
@@ -48,9 +48,10 @@ export default function Hero(p: HeroProps) {
           Trusted by 50,000+ businesses worldwide
         </div>
         <h1
+          className="vr-hero-h1"
           style={{
             margin: "26px 0 0",
-            fontSize: 72,
+            fontSize: "var(--vr-hero-fs, 72px)",
             lineHeight: 1.04,
             letterSpacing: "-0.035em",
             fontWeight: 800,

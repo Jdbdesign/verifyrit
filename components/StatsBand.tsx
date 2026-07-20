@@ -11,14 +11,12 @@ export type StatsBandProps = {
 
 export default function StatsBand({ statsRef, statEmails, statAccuracy, statCustomers }: StatsBandProps) {
   return (
-    <section style={{ padding: "30px var(--vr-gutter, 32px) 70px" }}>
+    <section className="vr-row" style={{ padding: "30px var(--vr-gutter, 32px) 70px", maxWidth: 1200, margin: "0 auto" }}>
       <div
         ref={statsRef}
         style={{
           position: "relative",
           overflow: "hidden",
-          maxWidth: 1200,
-          margin: "0 auto",
           background: "linear-gradient(150deg, #150F26, #0F0D16)",
           border: "1px solid rgba(255,255,255,0.08)",
           borderRadius: 26,

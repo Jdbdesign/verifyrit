@@ -14,7 +14,6 @@ import UseCases, { UseCase } from "./UseCases";
 import StatsBand from "./StatsBand";
 import PressLogos from "./PressLogos";
 import ConversionBand, { Benefit, MiniDot } from "./ConversionBand";
-import Testimonials, { Testimonial } from "./Testimonials";
 import FAQ, { FaqItem } from "./FAQ";
 import FinalCTA from "./FinalCTA";
 import Footer from "./Footer";
@@ -84,7 +83,6 @@ export default class VerifyRitApp extends Component<Record<string, never>, AppSt
   private bulkRef: RefObject<HTMLDivElement | null> = createRef();
   private accRef: RefObject<HTMLDivElement | null> = createRef();
   private ovRef: RefObject<HTMLDivElement | null> = createRef();
-  private testiRef: RefObject<HTMLDivElement | null> = createRef();
   private inputRef: RefObject<HTMLInputElement | null> = createRef();
   private _timers: ReturnType<typeof setTimeout>[] = [];
   private _timingIv?: ReturnType<typeof setInterval>;
@@ -679,33 +677,6 @@ export default class VerifyRitApp extends Component<Record<string, never>, AppSt
     const statAccuracy = (99.9 * sp).toFixed(1) + "%";
     const statCustomers = Math.round(50 * sp) + "K+";
 
-    const testiData = [
-      {
-        quote:
-          "“VerifyRit has completely transformed our email marketing. We’ve seen a 45% reduction in bounce rates and our deliverability has never been better.”",
-        name: "Sarah Johnson",
-        role: "Marketing Director, TechCorp Inc.",
-        initials: "SJ",
-        avatarBg: "linear-gradient(150deg, #34D399, #059669)",
-      },
-      {
-        quote:
-          "“The accuracy and speed of validation is remarkable. We validate millions of emails monthly, and VerifyRit handles it flawlessly. Best investment we’ve made.”",
-        name: "Michael Chen",
-        role: "Email Marketing Manager, GrowthHub",
-        initials: "MC",
-        avatarBg: "linear-gradient(150deg, #F2A73E, #D97706)",
-      },
-      {
-        quote: "“As a startup, we needed a reliable and affordable solution. VerifyRit delivered beyond our expectations. The ROI has been outstanding.”",
-        name: "Emily Rodriguez",
-        role: "CEO at StartupXYZ",
-        initials: "ER",
-        avatarBg: "linear-gradient(150deg, #8B5CF6, #6C2BDF)",
-      },
-    ];
-    const testimonials: Testimonial[] = testiData.map((t) => ({ ...t, stars: [0, 0, 0, 0, 0] }));
-
     const faqData = [
       {
         q: "What is email validation and why do I need it?",
@@ -878,13 +849,6 @@ export default class VerifyRitApp extends Component<Record<string, never>, AppSt
           onMiniPrev={() => this.setState({ miniTesti: (mi + 2) % 3 })}
           onMiniNext={() => this.setState({ miniTesti: (mi + 1) % 3 })}
           benefits={benefits}
-        />
-
-        <Testimonials
-          testiRef={this.testiRef}
-          testimonials={testimonials}
-          onTestiPrev={() => this.testiRef.current && this.testiRef.current.scrollBy({ left: -440, behavior: "smooth" })}
-          onTestiNext={() => this.testiRef.current && this.testiRef.current.scrollBy({ left: 440, behavior: "smooth" })}
         />
 
         <FAQ faqs={faqs} />

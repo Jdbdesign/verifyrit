@@ -332,7 +332,7 @@ export default function PricingApp() {
             </a>
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 16 }}>
           {faqData.map((faq, i) => {
             const open = i === openFaq;
             return (

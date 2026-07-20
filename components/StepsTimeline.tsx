@@ -87,8 +87,12 @@ export default function StepsTimeline({ stepBullets }: { stepBullets: string[] }
               How it works
             </span>
           </div>
-          <h2 style={{ fontSize: 48, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.12, margin: "0 0 28px", textWrap: "balance" }}>
-            Four simple steps to better deliverability
+          <h2 style={{ fontSize: 36, fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1.15, margin: "0 0 28px" }}>
+            Four simple
+            <br />
+            steps to better
+            <br />
+            deliverability
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
             {stepBullets.map((b, i) => (
