@@ -63,6 +63,8 @@ export default function Hero(p: HeroProps) {
           <br />
           <span
             style={{
+              display: "inline-block",
+              marginTop: 10,
               background: "linear-gradient(120deg, #C4B5FD, #8B5CF6)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
