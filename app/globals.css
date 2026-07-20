@@ -1,49 +1,38 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #08070C; color: #F5F3FA; font-family: 'Manrope', system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+a { color: #A78BFA; text-decoration: none; transition: color .2s; }
+a:hover { color: #C4B5FD; }
+input { font-family: inherit; }
+::selection { background: rgba(108,43,223,0.4); }
+
+@keyframes vr-scan { 0% { transform: translateX(-110%); } 100% { transform: translateX(110%); } }
+@keyframes vr-pulse-ring { 0% { transform: scale(.85); opacity: .55; } 70% { transform: scale(1.35); opacity: 0; } 100% { transform: scale(1.35); opacity: 0; } }
+@keyframes vr-fadeup { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes vr-badge-in { 0% { opacity: 0; transform: scale(.9); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes vr-spin { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+@keyframes vr-scrim-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes vr-modal-in { 0% { opacity: 0; transform: translateY(14px) scale(.98); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
+
+.vr-modal-scroll::-webkit-scrollbar { width: 10px; }
+.vr-modal-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 100px; border: 3px solid transparent; background-clip: padding-box; }
+
+.vr-nav-row { max-width: 1200px; margin: 0 auto; padding: 16px 32px; }
+@media (min-width: 1440px) {
+  .vr-nav-row { max-width: none; margin: 0; height: 70px; padding: 0 70px; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.vr-home-gutter { --vr-gutter: 32px; }
+@media (min-width: 1440px) {
+  .vr-home-gutter { --vr-gutter: 140px; }
+  .vr-home-gutter .vr-row {
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.vr-footer-gutter { padding-left: 32px; padding-right: 32px; }
+@media (min-width: 1440px) {
+  .vr-footer-gutter { padding-left: 70px; padding-right: 70px; }
 }
